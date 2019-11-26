@@ -1,4 +1,4 @@
-package neuralnet;
+package NeuralNet;
 
 import java.util.Random;
 
@@ -35,6 +35,11 @@ public class DenseLayer implements NetworkLayer {
         addBias(a, b);
         double[][] y = activationFunction.eval(a);
         return y;
+    }
+
+    @Override
+    public double[][] backward(double[][] y) {
+        return new double[0][];
     }
 
     private void addBias(double[][] a, double[] b) {

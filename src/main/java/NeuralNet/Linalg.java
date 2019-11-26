@@ -1,4 +1,4 @@
-package neuralnet;
+package NeuralNet;
 
 public class Linalg {
     public static double[] mul(double[][] A, double[] v) {

@@ -1,7 +1,4 @@
-import neuralnet.DenseLayer;
-import neuralnet.Linalg;
-import neuralnet.NetworkLayer;
-import neuralnet.ReLUActivation;
+package NeuralNet;
 
 public class Main {
     public static void main(String[] args) {
