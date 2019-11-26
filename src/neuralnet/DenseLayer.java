@@ -18,6 +18,7 @@ public class DenseLayer implements NetworkLayer {
     }
 
     private void randomizeWeights() {
+        Linalg.print(w);
         int M = w.length;
         int N = w[0].length;
         for (int i = 0; i < M; ++i) {
@@ -30,7 +31,7 @@ public class DenseLayer implements NetworkLayer {
 
     @Override
     public double[][] forward(double[][] x) {
-        double[][] a = Linalg.mul(w, x);
+        double[][] a = Linalg.mul(x, w);
         addBias(a, b);
         double[][] y = activationFunction.eval(a);
         return y;
